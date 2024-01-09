@@ -2,7 +2,7 @@ package Common;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 
-public class BasePage {
+public class CommonPage {
 
 
     public void closeWindowWithRobotClass() throws AWTException {

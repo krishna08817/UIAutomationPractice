@@ -1,30 +1,30 @@
 package TestCases;
 
 import org.testng.annotations.Test;
-import src.test.PageObjects.LandingPagePO;
+import PageObjects.LandingPagePO;
 
 import java.awt.*;
 
 public class LandingPage extends BaseClass {
 
-    @Test
+    @Test(description = "Verify the BusTickets logo Landing Page")
     public void verifyBusTickets()
     {
         LandingPagePO lPO=new LandingPagePO(driver);
         getUrl();
         lPO.clickBusTickets();
     }
-    @Test
+    @Test(description = "Verify the OTP is enabled in Login account with valid Number")
     public void verifyOtpisEnabled() throws InterruptedException {
         LandingPagePO lPO=new LandingPagePO(driver);
         getUrl();
         lPO.clickAccount();
         lPO.clickLogin();
         lPO.switchToFrame();
-        lPO.enterPhoneNum("9087874047");
+        lPO.enterPhoneNum("Valid NUmber");
 
     }
-    @Test
+    @Test(description = "Entering the Input to From Text Field in Landing Page ")
     public void verifyFromInput() throws InterruptedException {
         LandingPagePO lPO=new LandingPagePO(driver);
         getUrl();
@@ -32,33 +32,14 @@ public class LandingPage extends BaseClass {
 
     }
 
-    @Test
+    @Test(description = "Entering the Input to To Text Field in Landing Page")
     public void verifyToInput() throws InterruptedException {
         LandingPagePO lPO=new LandingPagePO(driver);
         getUrl();
         lPO.setTodest("hyderabad","Ameerpet");
     }
-    @Test
-    public void verifyDateCalender() throws InterruptedException {
-        LandingPagePO lPO=new LandingPagePO(driver);
-        getUrl();
-        lPO.clickOnDate();
-        Thread.sleep(5000);
-        // lPO.setDate("Jan","2024","6");
-        lPO.getMonthandYear();
-    }
-    @Test
-    public void verify() throws InterruptedException {
-        LandingPagePO lpo=new LandingPagePO(driver);
-        getUrl();
-        lpo.clickOnDate();
-        Thread.sleep(5000);
-        lpo.getMonthandYear();
-        lpo.dummytest();
-        Thread.sleep(5000);
-        lpo.clickOnSearchBuses();
-    }
-    @Test
+
+    @Test(description = "clicking the BookCab which is in bottom of Landing page")
     public void verifyBookCab() throws AWTException {
         LandingPagePO lpo=new LandingPagePO(driver);
         getUrl();
